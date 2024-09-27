@@ -1,0 +1,66 @@
+[0m13:46:48.900715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48c073d7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48bff2e3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48beba00a0>]}
+
+
+============================== 13:46:48.910521 | 3980babb-9c74-4f4c-b82b-d0d3c8e4e549 ==============================
+[0m13:46:48.910521 [info ] [MainThread]: Running with dbt=1.8.1
+[0m13:46:48.912947 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ec2-user/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt init classicmodels_modeling', 'send_anonymous_usage_stats': 'True'}
+[0m13:46:48.935585 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/home/ec2-user/.dbt')}
+[0m13:46:48.936856 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m13:46:48.941062 [debug] [MainThread]: Starter project path: /home/ec2-user/environment/lab-venv/lib64/python3.9/site-packages/dbt/include/starter_project
+[0m13:46:48.946683 [info ] [MainThread]: 
+Your new dbt project "classicmodels_modeling" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:46:48.955535 [info ] [MainThread]: Setting up your profile.
+[0m13:47:15.601716 [error] [MainThread]: Encountered an error:
+
+[0m13:47:15.605313 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/ec2-user/environment/lab-venv/lib64/python3.9/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/ec2-user/environment/lab-venv/lib64/python3.9/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ec2-user/environment/lab-venv/lib64/python3.9/site-packages/dbt/cli/main.py", line 469, in init
+    results = task.run()
+  File "/home/ec2-user/environment/lab-venv/lib64/python3.9/site-packages/dbt/task/init.py", line 347, in run
+    self.setup_profile(profile_name)
+  File "/home/ec2-user/environment/lab-venv/lib64/python3.9/site-packages/dbt/task/init.py", line 263, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/ec2-user/environment/lab-venv/lib64/python3.9/site-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/ec2-user/environment/lab-venv/lib64/python3.9/site-packages/dbt/task/init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/home/ec2-user/environment/lab-venv/lib64/python3.9/site-packages/dbt/task/init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/home/ec2-user/environment/lab-venv/lib64/python3.9/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/home/ec2-user/environment/lab-venv/lib64/python3.9/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m13:47:15.609739 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 26.809006, "process_user_time": 1.710958, "process_kernel_time": 0.097649, "process_mem_max_rss": "86920", "process_in_blocks": "2816", "process_out_blocks": "64", "command_success": false}
+[0m13:47:15.612954 [debug] [MainThread]: Command `dbt init` failed at 13:47:15.612121 after 26.81 seconds
+[0m13:47:15.614134 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48c073d7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48be67e730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48be67e490>]}
+[0m13:47:15.615230 [debug] [MainThread]: Flushing usage events
+[0m13:48:39.127197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31a486f700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31a2ce7c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31a2ce7bb0>]}
+
+
+============================== 13:48:39.134002 | b5a02082-2cc7-43e2-8195-bfe0c1398bcb ==============================
+[0m13:48:39.134002 [info ] [MainThread]: Running with dbt=1.8.1
+[0m13:48:39.135363 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ec2-user/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt init classicmodels_modeling', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:48:39.148868 [info ] [MainThread]: A project called classicmodels_modeling already exists here.
+[0m13:48:39.150416 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.11643208, "process_user_time": 1.662077, "process_kernel_time": 0.046306, "process_mem_max_rss": "83828", "process_out_blocks": "8", "process_in_blocks": "0"}
+[0m13:48:39.151813 [debug] [MainThread]: Command `dbt init` succeeded at 13:48:39.151568 after 0.12 seconds
+[0m13:48:39.152678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31a486f700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31a2cc9f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31a2d4cc70>]}
+[0m13:48:39.153581 [debug] [MainThread]: Flushing usage events
